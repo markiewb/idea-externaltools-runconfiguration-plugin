@@ -1,0 +1,42 @@
+<idea-plugin version="2">
+    <id>de.markiewb.idea.externalrunconfiguration</id>
+    <name>Run Configuration For External Tools</name>
+    <version>1.0</version>
+    <vendor url="https://github.com/markiewb/idea-externaltools-runconfiguration-plugin">markiewb</vendor>
+
+    <description><![CDATA[
+      It adds a 'Run Configuration' type for 'External Tools'.
+      <br/><br/>
+      The configuration executes nothing, BUT you can associate an 'External Tool' via the 'Before Launch' section.
+      Thus the 'External Tool' is available via the Run-/Debug-Popup.
+      <br/><br/>
+      It solves or helps you with the issues
+      <a href="https://youtrack.jetbrains.com/issue/IDEA-104897">IDEA-104897</a>,
+      <a href="https://youtrack.jetbrains.com/issue/IDEA-168555">IDEA-168555</a>,
+      <a href="https://youtrack.jetbrains.com/issue/IDEA-161285">IDEA-161285</a>
+    ]]></description>
+
+    <change-notes><![CDATA[
+    1.0: Initial version
+    ]]>
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="131.0"/>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products-->
+    <depends>com.intellij.modules.lang</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <configurationType
+                implementation="de.markiewb.idea.externalrunconfiguration.ExternalToolsRunConfigurationType"/>
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+
+</idea-plugin>
