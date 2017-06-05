@@ -9,8 +9,8 @@ It solves or helps you with the issues
 <a href="https://youtrack.jetbrains.com/issue/IDEA-104897">IDEA-104897</a>,
 <a href="https://youtrack.jetbrains.com/issue/IDEA-168555">IDEA-168555</a>,
 <a href="https://youtrack.jetbrains.com/issue/IDEA-161285">IDEA-161285</a>
-
-FYI Empty run configurations are also supported by <a href="https://plugins.jetbrains.com/plugin/265-batch-scripts-support">Batch Scripts Support</a>-plugin.
+<br>
+FYI Empty run configurations are also supported by <a href="https://plugins.jetbrains.com/plugin/265-batch-scripts-support">Batch Scripts Support</a>- or <a href="https://plugins.jetbrains.com/plugin/4230-bashsupport">BashSupport</a>-plugin.
 
 <h1>Configuration</h1>
 <img src="https://raw.githubusercontent.com/markiewb/idea-externaltools-runconfiguration-plugin/master/doc/Configuration.png"/>
