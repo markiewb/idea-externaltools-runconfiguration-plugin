@@ -1,3 +1,7 @@
+
+<hr/>
+<h1>This plugin is not compatible to newer IntelliJ IDEA versions &ge; 18.1. </h1> Help to make it compatible again https://github.com/markiewb/idea-externaltools-runconfiguration-plugin/issues/2 !
+<hr/>
 It adds a 'Run Configuration' type for 'External Tools'.
 <br/><br/>
 The configuration executes nothing, BUT you can associate an 'External Tool' via the 'Before Launch' section.
