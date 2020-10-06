@@ -17,12 +17,8 @@
 
 package de.markiewb.idea.externalrunconfiguration;
 
-import com.intellij.execution.configurations.ConfigurationFactory;
-import com.intellij.execution.configurations.ConfigurationType;
+import com.intellij.execution.configurations.ConfigurationTypeBase;
 import com.intellij.icons.AllIcons;
-import org.jetbrains.annotations.NotNull;
-
-import javax.swing.*;
 
 /**
  * It adds a 'Run Configuration' type for 'External Tools'.
@@ -32,30 +28,13 @@ import javax.swing.*;
  *
  * @author markiewb
  */
-public class ExternalToolsRunConfigurationType implements ConfigurationType {
-    @Override
-    public String getDisplayName() {
-        return "External Tools";
+public class ExternalToolsRunConfigurationType extends ConfigurationTypeBase
+{
+    public ExternalToolsRunConfigurationType()
+    {
+        super("External_Tools_CONFIGURATION", "External Tools", "External Tools Configuration Type", AllIcons.General.ExternalTools);
+        this.addFactory(new EmptyRunConfigurationFactory(this));
     }
 
-    @Override
-    public String getConfigurationTypeDescription() {
-        return "External Tools Configuration Type";
-    }
 
-    @Override
-    public Icon getIcon() {
-        return AllIcons.General.ExternalToolsSmall;
-    }
-
-    @NotNull
-    @Override
-    public String getId() {
-        return "External_Tools_CONFIGURATION";
-    }
-
-    @Override
-    public ConfigurationFactory[] getConfigurationFactories() {
-        return new ConfigurationFactory[]{new EmptyRunConfigurationFactory(this)};
-    }
 }

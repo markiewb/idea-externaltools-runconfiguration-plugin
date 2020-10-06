@@ -20,6 +20,11 @@ FYI Empty run configurations are also supported by <a href="https://plugins.jetb
 <img src="https://raw.githubusercontent.com/markiewb/idea-externaltools-runconfiguration-plugin/master/doc/Configuration.png"/>
 
 <h1>Changelog</h1>
+1.1: 
+<ul>
+<li>Fixed: Run is not repeatable (Incompatibility to 2018.x) <a href="https://github.com/markiewb/idea-externaltools-runconfiguration-plugin/issues/2">#2</a></li>
+<li>Fixed: Exceptions with IntelliJ 2020.2 <a href="https://github.com/markiewb/idea-externaltools-runconfiguration-plugin/issues/3">#3</a></li>
+</ul>
 1.0: Initial version
 
 <h1>License</h1>

@@ -1,7 +1,7 @@
-<idea-plugin version="2">
+<idea-plugin>
     <id>de.markiewb.idea.externalrunconfiguration</id>
     <name>Run Configuration For External Tools</name>
-    <version>1.0</version>
+    <version>1.1</version>
     <vendor url="https://github.com/markiewb/idea-externaltools-runconfiguration-plugin">markiewb</vendor>
 
     <description><![CDATA[
@@ -23,7 +23,12 @@ It solves or helps you with the issues
     ]]></description>
 
     <change-notes><![CDATA[
-    1.0: Initial version
+1.1: 
+<ul>
+<li>Fixed: Run is not repeatable (Incompatibility to 2018.x) <a href="https://github.com/markiewb/idea-externaltools-runconfiguration-plugin/issues/2">#2</a></li>
+<li>Fixed: Exceptions with IntelliJ 2020.2 <a href="https://github.com/markiewb/idea-externaltools-runconfiguration-plugin/issues/3">#3</a></li>
+</ul>
+
     ]]>
     </change-notes>
 

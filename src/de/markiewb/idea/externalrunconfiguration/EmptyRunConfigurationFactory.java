@@ -20,6 +20,7 @@ package de.markiewb.idea.externalrunconfiguration;
 import com.intellij.execution.configurations.ConfigurationFactory;
 import com.intellij.execution.configurations.ConfigurationType;
 import com.intellij.execution.configurations.RunConfiguration;
+import com.intellij.execution.configurations.RunConfigurationSingletonPolicy;
 import com.intellij.openapi.project.Project;
 import org.jetbrains.annotations.NotNull;
 
@@ -39,9 +40,17 @@ class EmptyRunConfigurationFactory extends ConfigurationFactory {
         return new EmptyRunConfiguration(project, this, "External tools");
     }
 
-
+    @NotNull
     @Override
-    public String getName() {
-        return FACTORY_NAME;
+    public String getId()
+    {
+       return super.getType().getId();
+    }
+
+    @NotNull
+    @Override
+    public RunConfigurationSingletonPolicy getSingletonPolicy()
+    {
+        return RunConfigurationSingletonPolicy.MULTIPLE_INSTANCE;
     }
 }

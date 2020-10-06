@@ -17,10 +17,13 @@
 
 package de.markiewb.idea.externalrunconfiguration;
 
-import com.intellij.execution.ExecutionException;
+import com.intellij.execution.DefaultExecutionResult;
+import com.intellij.execution.ExecutionResult;
 import com.intellij.execution.Executor;
 import com.intellij.execution.configurations.*;
+import com.intellij.execution.process.NopProcessHandler;
 import com.intellij.execution.runners.ExecutionEnvironment;
+import com.intellij.execution.runners.ProgramRunner;
 import com.intellij.openapi.options.SettingsEditor;
 import com.intellij.openapi.project.Project;
 import org.jetbrains.annotations.NotNull;
@@ -47,8 +50,28 @@ class EmptyRunConfiguration extends RunConfigurationBase {
 
     @Nullable
     @Override
-    public RunProfileState getState(@NotNull Executor executor, @NotNull ExecutionEnvironment executionEnvironment) throws
-            ExecutionException {
+    public RunProfileState getState(@NotNull Executor executor, @NotNull ExecutionEnvironment executionEnvironment)
+    {
         return new EmptyRunProfileState(executionEnvironment);
     }
+    
+    static class EmptyRunProfileState implements RunProfileState {
+        private final ExecutionEnvironment myEnvironment;
+
+        public EmptyRunProfileState(ExecutionEnvironment environment) {
+            myEnvironment = environment;
+        }
+
+        @Nullable
+        @Override
+        public ExecutionResult execute(Executor executor, @NotNull ProgramRunner runner) throws com.intellij.execution.ExecutionException {
+            final RunProfile profile = myEnvironment.getRunProfile();
+            if (profile instanceof EmptyRunConfiguration) {
+                //NOOP action
+                return new DefaultExecutionResult(null, new NopProcessHandler());
+            }
+            return null;
+        }
+    }
+
 }
