@@ -17,6 +17,11 @@ FYI Empty run configurations are also supported by <a href="https://plugins.jetb
 <img src="https://raw.githubusercontent.com/markiewb/idea-externaltools-runconfiguration-plugin/master/doc/Configuration.png"/>
 
 <h1>Changelog</h1>
+1.2: 
+<ul>
+<li>Fixed: Update IDEA requirements to 2018.3.6 <a href="https://github.com/markiewb/idea-externaltools-runconfiguration-plugin/issues/4">#4</a></li>
+</ul>
+
 1.1: 
 <ul>
 <li>Fixed: Run is not repeatable (Incompatibility to 2018.x) <a href="https://github.com/markiewb/idea-externaltools-runconfiguration-plugin/issues/2">#2</a></li>
